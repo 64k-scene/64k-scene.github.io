@@ -1,11 +1,269 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>64 scene</title>
-    </head>
-    <body>
-        <h1>64 scene</h1>
-        <p>A list of resources about demoscene 64k intros.</p>
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>64k Scene</title>
+
+    <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(122deg, var(--main-bg-color) 0%, #1d2417 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    color: var(--main-text-color);
+    letter-spacing: .05em;
+    font-size: 1rem;
+
+    --border-color: #727272;
+    --main-text-color: #ddd;
+    --secondary-text-color: #8a8;
+    --panel-bg-color: #202020;
+    --panel-hover-bg-color: #101010;
+    --main-bg-color: #303030;
+}
+
+/* CSS pages - https://stackoverflow.com/questions/3354279/default-target-with-css/73473191 */
+
+section, section:target ~ #gallery {
+  display: none;
+}
+
+#gallery, section:target {
+  display: block;
+}
+
+hr {
+    border-color: var(--border-color);
+    border-width: 1px;
+}
+
+.card {
+    background: var(--panel-bg-color);
+    border: 1px var(--border-color) solid;
+    margin: 8px;
+    padding: 8px;
+    position: relative;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 8px auto;
+}
+
+.card:hover {
+    background: var(--panel-hover-bg-color);
+    transition: 0.2s;
+}
+
+.card img {
+    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-color: var(--border-color);
+    border-width: 1px 0 0 1px;
+    background: rgb(0 0 0);
+    font-size: 1.8rem;
+    padding: 10px;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #8a8;
+}
+
+h2 {
+    margin: 8px 0 0 0;
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 0;
+}
+
+header {
+    background-color: var(--panel-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+nav {
+    text-align: center;
+}
+nav a {
+    padding: 8px 16px;
+}
+
+a {
+    color: var(--secondary-text-color);
+}
+
+.group {
+    color: var(--secondary-text-color);
+}
+
+.links {
+    border-top: 1px var(--border-color) solid;
+    padding: 8px 8px 0 8px;
+    vertical-align: middle;
+    margin: 16px 0 0 -8px;
+}
+
+.links a {
+    vertical-align: middle;
+    margin: 4px;
+}
+
+nav a, a.action-link {
+    border: 1px solid transparent;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 22px;
+    color: var(--secondary-text-color);
+
+    font-size: 1rem;
+    font-variant: small-caps;
+
+    &:hover {
+        border-bottom: 1px solid var(--main-text-color);
+    }
+}
+
+p, li {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.3;
+}
+
+li:not(:last-child) {
+    margin-bottom: 8px;  
+}
+
+</style>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Gallery</a>
+            <a href="#resources">Resources</a>
+            <a href="#about">About</a>
+        </nav>
+        
+    </header>
+
+    <section id="resources">
+
+        <div class="card">
+            <h2>Getting Started</h2>
+            <p>quick intro</p>
+        </div>
+        
+        <div class="card">
+            <h2>Compression</h2>
+            <ul>
+                <li></li>
+                <li>Tool 2</li>
+                <li>Tool 3</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Music</h2>
+            <p>It's common for the music to take around 16kB, but this can vary a lot. Instruments are often generated using sound
+                synthesis, and the list of notes is compressed.
+            </p>
+            <ul>
+                <li><a href="https://github.com/hzdgopher/64klang">64klang</a>
+                <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>
+                <li><a href="https://tunefish-synth.com/">Tunefish</a>
+                <li><a href="http://1337haxorz.de/products.html">v2</a>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <div class="card">
+            <h2>What is this?</h2>
+            <p>The demoscene is a computer art subculture focused on producing demos.</p>
+            
+            <p>
+                Demos are digital art creations at the crossroad of short films, music videos and video games. Although they present
+                a non-interactive experience, often music driven, like a music video does, they are rendered in real-time like video
+                games are. The purpose of a demo is to show off programming, visual art, and musical skills. Demos and other demoscene productions (graphics, music, videos, games)
+                are shared at festivals known as demoparties, voted on by those who attend and released online.
+            </p>
+
+            <p>
+                64k intros are demos with an added arbitrary limitation on the size: they consist of a single binary file of no more
+                than 65,536 bytes. No extra assets, no network access, no extra libraries: the usual rule
+                is that it should run on a freshly-installed system (often Microsoft Windows) with up-to-date drivers.
+            </p>
+
+            <p>
+                This website intends to show some noteworthy examples of this genre, and gather some documentation and resources for
+                creators, newcomers and seasoned alike, interested in this kind of size coding. You can contribute to this website by
+                opening pull requests on GitHub.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="gallery">
+
+        <div class="card">
+            <h2>What is this?</h2>
+            <p>
+                The digital art creations below are “64k intros”: small computer programs of 65,536 bytes or less, that present a short
+                audio visual experience. They are a showcase of creativity and technical skills, using techniques like procedural
+                generation, sound synthesis, and real-time graphics.
+                <a href="#about">More info</a>.
+            </p>
+        </div>
+
+        <div class="gallery">
+            
+            <div class="card">
+                <img width="800px" style="display: block;" src="https://content.pouet.net/files/screenshots/00069/00069654.jpg">
+                <!-- <iframe style="display: block;" width="560" height="315" src="https://www.youtube.com/embed/-dNqYrP3QHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe> -->
+                <h3>H - Immersion</h2>
+                <div class="group">by Ctrl-Alt-Test</div>
+                <div class="date">2017</div>
+                <div class="links">
+                    <a href="#" class="action-link"><img title="Download" width="24px" style="filter: invert(100%);" src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png"></a>
+                    <a href="#" class="action-link"><img title="View on YouTube" width="32px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png"></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img width="800px" style="display: block;" src="https://content.pouet.net/files/screenshots/00065/00065342.jpg">
+                <h3>Offscreen Colonies</h2>
+                <div class="group">by Conspiracy</div>
+                <div class="date">2017</div>
+                <div class="links">
+                    <a href="#" class="action-link"><img title="Download" width="24px" style="filter: invert(100%);" src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png"></a>
+                    <a href="#" class="action-link"><img title="View on YouTube" width="32px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png"></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
 </html>
