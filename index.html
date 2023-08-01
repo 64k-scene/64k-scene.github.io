@@ -128,6 +128,18 @@ a {
     vertical-align:top;
 }
 
+.pros ul {
+    border-left: solid 4pt forestgreen;
+    list-style: none;
+    padding-left: 1em;
+}
+
+.cons ul {
+    border-left: solid 4pt crimson;
+    list-style: none;
+    padding-left: 1em;
+}
+
 .pros-and-cons li {
     text-align: left;
 }
@@ -209,9 +221,9 @@ li:not(:last-child) {
 
                     <div class="cons">
                         <h4>Cons</h4>
-                        <ul class="cons">
+                        <ul>
                             <li>Limited debugging information</li>
-                            <li>Generated binaries are generally flagged as malware by antivirus vendors</li>
+                            <li>Generated binaries generally flagged as malware by antivirus</li>
                             <li>Support for 32 bits only</li>
                         </ul>
                     </div>
@@ -239,7 +251,7 @@ li:not(:last-child) {
                     <div class="pros">
                         <h4>Pros</h4>
                         <ul>
-                            <li>Currently best compression</li>
+                            <li>Currently the best compression</li>
                             <li>Simple to use</li>
                             <li>Support for 32 bits and 64 bits</li>
                         </ul>
@@ -247,7 +259,8 @@ li:not(:last-child) {
 
                     <div class="cons">
                         <h4>Cons</h4>
-                        <ul class="cons">
+                        <ul>
+                            <li>Limited debugging information</li>
                             <li>Slow</li>
                         </ul>
                     </div>
