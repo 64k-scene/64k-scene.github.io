@@ -30,6 +30,7 @@ body, html {
 
 section, section:target ~ #gallery {
   display: none;
+  padding: 4px;
 }
 
 #gallery, section:target {
@@ -92,7 +93,6 @@ h3 {
 header {
     background-color: var(--panel-bg-color);
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 16px;
     padding: 8px;
 }
 
@@ -149,9 +149,15 @@ li:not(:last-child) {
 }
 
 .screenshot {
-    width: 800px;
+    width: 100%;
     display: block;
     border-radius: 8px;
+}
+
+.youtube {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 </style>
@@ -263,19 +269,21 @@ const allDemos = [{
     title: "H - Immersion",
     group: "Ctrl-Alt-Test",
     screenshot: "https://content.pouet.net/files/screenshots/00069/00069654.jpg",
+    url: "http://ctrl-alt-test.fr/dl/cat-H-Immersion.zip",
     youtube: "27PN1SsXbjM",
     date: "2017",
 }, {
     title: "Offscreen Colonies",
     group: "Conspiracy",
     screenshot: "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
+    url: "https://conspiracy.hu/get/58/cns!oc.zip",
     youtube: "PaNYOzwlVC8",
     date: "2015",
 }];
 
 function createYouTubePlayer(id) {
     const iframe = document.createElement("div");
-    iframe.innerHTML = `<iframe style="display: block;" width="800" height="450"
+    iframe.innerHTML = `<iframe class="youtube"
         src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen loading="lazy">
@@ -310,7 +318,7 @@ function createCard(data) {
     const links = document.createElement("div");
     links.className = "links";
     const download = document.createElement("a");
-    download.href = "#";
+    download.href = data.url;
     const downloadIcon = document.createElement("img");
     downloadIcon.title = "Download";
     downloadIcon.width = 24;
