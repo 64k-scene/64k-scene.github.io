@@ -57,12 +57,6 @@ hr {
     transition: 0.2s;
 }
 
-.card img {
-    border-radius: 8px;
-    display: block;
-    max-width: 100%;
-}
-
 .date {
     position: absolute;
     right: 0;
@@ -152,6 +146,12 @@ p, li {
 
 li:not(:last-child) {
     margin-bottom: 8px;  
+}
+
+.screenshot {
+    width: 800px;
+    display: block;
+    border-radius: 8px;
 }
 
 </style>
@@ -255,33 +255,105 @@ li:not(:last-child) {
             </p>
         </div>
 
-        <div class="gallery">
-            
-            <div class="card">
-                <img width="800px" style="display: block;" src="https://content.pouet.net/files/screenshots/00069/00069654.jpg">
-                <!-- <iframe style="display: block;" width="560" height="315" src="https://www.youtube.com/embed/-dNqYrP3QHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe> -->
-                <h3>H - Immersion</h2>
-                <div class="group">by Ctrl-Alt-Test</div>
-                <div class="date">2017</div>
-                <div class="links">
-                    <a href="#" class="action-link"><img title="Download" width="24px" style="filter: invert(100%);" src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png"></a>
-                    <a href="#" class="action-link"><img title="View on YouTube" width="32px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png"></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img width="800px" style="display: block;" src="https://content.pouet.net/files/screenshots/00065/00065342.jpg">
-                <h3>Offscreen Colonies</h2>
-                <div class="group">by Conspiracy</div>
-                <div class="date">2017</div>
-                <div class="links">
-                    <a href="#" class="action-link"><img title="Download" width="24px" style="filter: invert(100%);" src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png"></a>
-                    <a href="#" class="action-link"><img title="View on YouTube" width="32px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png"></a>
-                </div>
-            </div>
-
-        </div>
+        <div id="demo-list" class="gallery"></div>
     </section>
+
+<script>
+const allDemos = [{
+    title: "H - Immersion",
+    group: "Ctrl-Alt-Test",
+    screenshot: "https://content.pouet.net/files/screenshots/00069/00069654.jpg",
+    youtube: "27PN1SsXbjM",
+    date: "2017",
+}, {
+    title: "Offscreen Colonies",
+    group: "Conspiracy",
+    screenshot: "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
+    youtube: "PaNYOzwlVC8",
+    date: "2015",
+}];
+
+function createYouTubePlayer(id) {
+    const iframe = document.createElement("div");
+    iframe.innerHTML = `<iframe style="display: block;" width="800" height="450"
+        src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen loading="lazy">
+        </iframe>`;
+    return iframe;    
+}
+
+function createCard(data) {
+    const card = document.createElement("div");
+    card.className = "card";
+    const preview = document.createElement("div");
+    const img = document.createElement("img");
+    img.className = "screenshot";
+    img.src = data.screenshot;
+    preview.appendChild(img);
+    card.appendChild(preview);
+
+    const title = document.createElement("h3");
+    title.innerText = data.title;
+    card.appendChild(title);
+
+    const group = document.createElement("div");
+    group.className = "group";
+    group.innerText = "by " + data.group;
+    card.appendChild(group);
+
+    const date = document.createElement("div");
+    date.className = "date";
+    date.innerText = data.date;
+    card.appendChild(date);
+
+    const links = document.createElement("div");
+    links.className = "links";
+    const download = document.createElement("a");
+    download.href = "#";
+    const downloadIcon = document.createElement("img");
+    downloadIcon.title = "Download";
+    downloadIcon.width = 24;
+    downloadIcon.style.filter = "invert(100%)";
+    downloadIcon.src = "https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png";
+    download.appendChild(downloadIcon);
+
+    const youtube = document.createElement("a");
+    youtube.href = "#";
+    const youtubeIcon = document.createElement("img");
+    youtubeIcon.title = "View on YouTube";
+    youtubeIcon.width = 32;
+    youtubeIcon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png";
+    youtube.appendChild(youtubeIcon);
+    var video = false;
+    youtube.onclick = () => {
+        preview.innerHTML = "";
+        if (video) {
+            preview.appendChild(img);
+        } else {
+            preview.appendChild(createYouTubePlayer(data.youtube));
+        }
+        video = !video;
+    };
+
+    links.appendChild(download);
+    links.appendChild(youtube);
+    card.appendChild(links);
+
+    return card;
+}
+
+function updateGallery() {
+    const demos = document.getElementById("demo-list");
+    demos.innerHTML = "";
+    for (const data of allDemos) {
+        demos.appendChild(createCard(data));
+    }
+}
+
+updateGallery();
+
+</script>
 
 </body>
 </html>
