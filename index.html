@@ -111,11 +111,25 @@ a {
     color: var(--secondary-text-color);
 }
 
-.links {
+#demo-list .links {
     border-top: 1px var(--border-color) solid;
     padding: 8px 8px 0 8px;
     vertical-align: middle;
     margin: 16px 0 0 -8px;
+}
+
+.tool {
+    margin: 2em 2em 4em 2em;
+}
+
+.pros-and-cons div {
+    display: inline-block;
+    width: 45%;
+    vertical-align:top;
+}
+
+.pros-and-cons li {
+    text-align: left;
 }
 
 .links a {
@@ -176,11 +190,117 @@ li:not(:last-child) {
         
         <div class="card">
             <h2>Compression</h2>
-            <ul>
-                <li></li>
-                <li>Tool 2</li>
-                <li>Tool 3</li>
-            </ul>
+            <div class="tool">
+                <h3>kkrunchy</h3>
+                <p>
+                    Written by Farbrausch, kkrunchy has been the de facto executable compression tool for 64k intros since its release in 2006.
+                </p>
+
+                <div class="pros-and-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Efficient</li>
+                            <li>Fast</li>
+                            <li>Simple to use</li>
+                            <li>Source code available</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul class="cons">
+                            <li>Limited debugging information</li>
+                            <li>Generated binaries are generally flagged as malware by antivirus vendors</li>
+                            <li>Support for 32 bits only</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <h4>Links</h4>
+                    <ul class="tool-links">
+                        <li><a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy project page</a></li>
+                        <li><a href="https://www.pouet.net/prod.php?which=26088">kkrunchy on Pouët</a></li>
+                        <li><a href="https://demozoo.org/productions/38/">kkrunchy on Demozoo</a></li>
+                        <li><a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">kkrunchy source code</a></li>
+                        <li><a href="https://fgiesen.wordpress.com/2011/01/24/x86-code-compression-in-kkrunchy/">Article: x86 code compression in kkrunchy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <h3>squishy</h3>
+                <p>
+                    Written by Logicoma, squishy is a recent and modern alternative to kkrunchy. It generally gets better results than kkrunchy in terms of final size (<a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">see the metrics</a>), but is also significantly slower, so it offers a different tradeoff.
+                </p>
+
+                <div class="pros-and-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Currently best compression</li>
+                            <li>Simple to use</li>
+                            <li>Support for 32 bits and 64 bits</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul class="cons">
+                            <li>Slow</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <h4>Links</h4>
+                    <ul class="tool-links">
+                        <li><a href="https://logicoma.io/squishy/">squishy project page</a></li>
+                        <li><a href="https://www.pouet.net/prod.php?which=85098">squishy on Pouët</a></li>
+                        <li><a href="https://demozoo.org/productions/295987/">squishy on Demozoo</a></li>
+                        <li><a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">kkrunchy source code</a></li>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">Metrics comparing squishy to kkrunchy</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=O5LfE_qNzes">Revision 2020 seminar: modern 64k intro compression</a></li>
+                        <li><a href="https://yupferris.github.io/blog/2020/08/31/c64-4k-intro-packer-deep-dive.html#squishys-decompressor-compressor">Blog post with some details about squishy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <h3>Shader Minifier</h3>
+                <p>
+                    Written by Ctrl-Alt-Test, Shader Minifier is the de facto shader minification tool. It rewrites shader source code in a way that uses a smaller footprint and compresses well.
+                </p>
+
+                <div class="pros-and-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Many minification options</li>
+                            <li>Source code available</li>
+                            <li>Support for GLSL and HLSL</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Limited support for multiple shaders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <h4>Links</h4>
+                    <ul class="tool-links">
+                        <li><a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier on GitHub</a></li>
+                        <li><a href="https://www.pouet.net/prod.php?which=55176">Shader Minifier on Pouët</a></li>
+                        <li><a href="https://demozoo.org/productions/175765/">Shader Minifier on Demozoo</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="card">
@@ -255,7 +375,7 @@ li:not(:last-child) {
             </p>
         </div>
 
-        <div id="demo-list" class="gallery"></div>
+        <div id="demo-list" class="gallery"/>
     </section>
 
 <script>
