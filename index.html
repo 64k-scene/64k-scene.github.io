@@ -87,7 +87,16 @@ h3 {
     font-weight: 300;
     font-size: 1.5rem;
     color: #ccc;
-    margin: 0;
+}
+
+.gallery h3 {
+    margin: 0.2em 0 0 0
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
 header {
@@ -111,16 +120,24 @@ a {
     color: var(--secondary-text-color);
 }
 
-.links {
+#demo-list .links {
     border-top: 1px var(--border-color) solid;
     padding: 8px 8px 0 8px;
     vertical-align: middle;
     margin: 16px 0 0 -8px;
 }
 
-.links a {
-    vertical-align: middle;
-    margin: 4px;
+.tool {
+    margin: 2em 2em 4em 2em;
+}
+
+.links ul {
+    list-style-type: "🡺";
+    padding-left: 2.2em;
+}
+
+.links li {
+    padding-left: 0.5em;
 }
 
 nav a, a.action-link {
@@ -182,11 +199,74 @@ li:not(:last-child) {
         
         <div class="card">
             <h2>Compression</h2>
-            <ul>
-                <li></li>
-                <li>Tool 2</li>
-                <li>Tool 3</li>
-            </ul>
+
+            <h3>Windows executable packers</h3>
+
+            <p>
+                There are two main alternatives to compress native binaries on Windows: kkrunchy and squishy.
+            </p>
+
+            <h4>kkrunchy</h4>
+            <p>
+                <a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy</a> was written by Farbrausch and has been the de facto executable compression tool for 64k intros since its release in 2006. It is simple to use, fast and efficient, but gives little debugging information (Revival and BoyC have written a version giving more detail, which they've dubbed <a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy</a></li>). Note that the generated binaries are generally flagged as malware by antivirus vendors.
+            </p>
+
+            <div class="links">
+                <h5>At a glance</h5>
+                <ul>
+                    <li>Windows 32 bits</li>
+                    <li><a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy project page</a> and <a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">source code</a></li>
+                    <li><a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy project page and source code</a></li>
+                    <li><a href="https://fgiesen.wordpress.com/2011/01/24/x86-code-compression-in-kkrunchy/">Article: x86 code compression in kkrunchy</a></li>
+                </ul>
+            </div>
+
+            <h4>squishy</h4>
+            <p>
+                <a href="https://logicoma.io/squishy/">squishy</a> is a recent and modern alternative to kkrunchy, written by Logicoma. It generally gets better results than kkrunchy in terms of final size (<a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">see the metrics</a>), but is also significantly slower, so it offers a different tradeoff.
+            </p>
+
+            <div class="links">
+                <h5>At a glance</h5>
+                <ul>
+                    <li>Windows 32 bits and 64 bits</li>
+                    <li>Currently the best compression</li>
+                    <li><a href="https://logicoma.io/squishy/">squishy project page</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">squishy / kkrunchy comparison</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=O5LfE_qNzes">Revision 2020 seminar: modern 64k intro compression</a></li>
+                    <li><a href="https://yupferris.github.io/blog/2020/08/31/c64-4k-intro-packer-deep-dive.html#squishys-decompressor-compressor">Blog post with some details about squishy</a></li>
+                </ul>
+            </div>
+
+            <h4>Crinkler</h4>
+            <p>
+                While <a href="https://github.com/runestubbe/Crinkler">Crinkler</a> is the de facto executable compression tool for 4k and 8k intros, its use for sizes like 32k and 64k is not recommended.
+            </p>
+
+            <div class="links">
+                <h5>At a glance</h5>
+                <ul>
+                    <li>For 1k, 4k, 8k, but not for 64k</li>
+                    <li><a href="https://github.com/runestubbe/Crinkler">Crinkler project page and source code</a></li>
+                </ul>
+            </div>
+
+
+            <h3>Shader minification</h3>
+
+            <h4>Shader Minifier</h4>
+            <p>
+                <a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier</a> written by Ctrl-Alt-Test and is the de facto shader minification tool. It rewrites shader source code in a way that uses a smaller footprint and compresses well, and options are exposed to choose the transformations to apply. Note that it can be more difficult to use efficiently with multiple shaders.
+            </p>
+
+            <div class="links">
+                <h5>At a glance</h5>
+                <ul>
+                    <li>GLSL and HLSL</li>
+                    <li><a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier project page and source code</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="card">
