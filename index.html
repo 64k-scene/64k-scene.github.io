@@ -177,6 +177,23 @@ li:not(:last-child) {
     aspect-ratio: 16/9;
 }
 
+#youtube-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#youtube-player {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #000;
+}
+
 </style>
 
 <body>
@@ -189,6 +206,10 @@ li:not(:last-child) {
         </nav>
         
     </header>
+
+    <div id="youtube-overlay">
+        <div id="youtube-player"></div>
+    </div>
 
     <section id="resources">
 
@@ -364,6 +385,9 @@ li:not(:last-child) {
     </section>
 
 <script>
+const youtubeOverlay = document.getElementById("youtube-overlay");
+const youtubePlayer = document.getElementById("youtube-player");
+
 const allDemos = [{
     title: "H - Immersion",
     group: "Ctrl-Alt-Test",
@@ -380,14 +404,13 @@ const allDemos = [{
     date: "2015",
 }];
 
-function createYouTubePlayer(id) {
-    const iframe = document.createElement("div");
-    iframe.innerHTML = `<iframe class="youtube"
+function showYouTube(id) {
+    youtubePlayer.innerHTML = `<iframe class="youtube"
         src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen loading="lazy">
         </iframe>`;
-    return iframe;    
+    youtubeOverlay.style.display = "block";
 }
 
 function createCard(data) {
@@ -432,15 +455,8 @@ function createCard(data) {
     youtubeIcon.width = 32;
     youtubeIcon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png";
     youtube.appendChild(youtubeIcon);
-    var video = false;
     youtube.onclick = () => {
-        preview.innerHTML = "";
-        if (video) {
-            preview.appendChild(img);
-        } else {
-            preview.appendChild(createYouTubePlayer(data.youtube));
-        }
-        video = !video;
+        showYouTube(data.youtube);
     };
 
     links.appendChild(download);
@@ -459,6 +475,9 @@ function updateGallery() {
 }
 
 updateGallery();
+youtubeOverlay.addEventListener("click", (e) => {
+    youtubeOverlay.style.display = "none";
+});
 
 </script>
 
