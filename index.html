@@ -62,10 +62,6 @@ hr {
     position: absolute;
     right: 0;
     bottom: 0;
-    border-style: solid;
-    border-color: var(--border-color);
-    border-width: 1px 0 0 1px;
-    background: rgb(0 0 0);
     font-size: 1.8rem;
     padding: 10px;
     border-radius: 8px;
@@ -169,6 +165,13 @@ li:not(:last-child) {
     width: 100%;
     display: block;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.info {
+    float: left;
+    width: 42px;
+    padding: 8px 8px 4px 0;
 }
 
 .youtube {
@@ -395,6 +398,7 @@ const allDemos = [{
     url: "http://ctrl-alt-test.fr/dl/cat-H-Immersion.zip",
     youtube: "27PN1SsXbjM",
     date: "2017",
+    pouet: "69654",
 }, {
     title: "Offscreen Colonies",
     group: "Conspiracy",
@@ -402,6 +406,7 @@ const allDemos = [{
     url: "https://conspiracy.hu/get/58/cns!oc.zip",
     youtube: "PaNYOzwlVC8",
     date: "2015",
+    pouet: "65342",
 }];
 
 function showYouTube(id) {
@@ -420,8 +425,20 @@ function createCard(data) {
     const img = document.createElement("img");
     img.className = "screenshot";
     img.src = data.screenshot;
+    img.onclick = () => {
+        showYouTube(data.youtube);
+    };
     preview.appendChild(img);
     card.appendChild(preview);
+
+    const infoLink = document.createElement("a");
+    infoLink.href = "https://www.pouet.net/prod.php?which=" + data.pouet;
+    const info = document.createElement("img");
+    info.className = "info";
+    info.title = "View details on pouet.net";
+    info.src = "https://www.freeiconspng.com/uploads/information-icon-5.png";
+    infoLink.appendChild(info);
+    card.appendChild(infoLink);
 
     const title = document.createElement("h3");
     title.innerText = data.title;
@@ -436,33 +453,6 @@ function createCard(data) {
     date.className = "date";
     date.innerText = data.date;
     card.appendChild(date);
-
-    const links = document.createElement("div");
-    links.className = "links";
-    const download = document.createElement("a");
-    download.href = data.url;
-    const downloadIcon = document.createElement("img");
-    downloadIcon.title = "Download";
-    downloadIcon.width = 24;
-    downloadIcon.style.filter = "invert(100%)";
-    downloadIcon.src = "https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png";
-    download.appendChild(downloadIcon);
-
-    const youtube = document.createElement("a");
-    youtube.href = "#";
-    const youtubeIcon = document.createElement("img");
-    youtubeIcon.title = "View on YouTube";
-    youtubeIcon.width = 32;
-    youtubeIcon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png";
-    youtube.appendChild(youtubeIcon);
-    youtube.onclick = () => {
-        showYouTube(data.youtube);
-    };
-
-    links.appendChild(download);
-    links.appendChild(youtube);
-    card.appendChild(links);
-
     return card;
 }
 
