@@ -198,6 +198,15 @@
 const youtubeOverlay = document.getElementById("youtube-overlay");
 const youtubePlayer = document.getElementById("youtube-player");
 
+const shuffleArray = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
 function showYouTube(id) {
     youtubePlayer.innerHTML = `<iframe class="youtube"
         src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0"
@@ -214,6 +223,7 @@ function createCard(data) {
     const img = document.createElement("img");
     img.className = "screenshot";
     img.src = data.screenshot;
+    img.setAttribute("loading", "lazy");
     img.onclick = () => {
         showYouTube(data.youtube);
     };
@@ -254,6 +264,7 @@ function updateGallery() {
     }
 }
 
+shuffleArray(allDemos);
 updateGallery();
 youtubeOverlay.addEventListener("click", (e) => {
     youtubePlayer.innerHTML = "";
