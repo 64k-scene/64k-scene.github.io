@@ -314,6 +314,35 @@ li:not(:last-child) {
         </div>
 
         <div class="card">
+            <h2>Texture</h2>
+
+            <p>
+                Procedural texture generation can be done either on the CPU or on the GPU. The article
+                <a href="https://conspiracy.hu/articles/9/">GPU Based Texture Synthesis</a> discusses some advantages of using the GPU.
+                Generating textures on the CPU can be slow, so you'll probably want to use multiple threads.
+            </p>
+
+            <p>General introduction to texture generation:</p>
+            <ul>
+                <li><a href="http://www.upvector.com/?section=Tutorials&subsection=Intro%20to%20Procedural%20Textures">Intro to
+                        Procedural Textures</a>
+                <li><a href="https://www.ctrl-alt-test.fr/2018/texturing-in-a-64kb-intro/">Texturing in a 64kB intro</a>, an overview of
+                    the texture generation in Immersion.
+            </ul>
+
+            <h3>Voronoi</h3>
+            <p>Voronoi diagrams are a simple tool for procedural generation and can be used in a variety of ways:</p>
+            <ul>
+                <li><a href="https://thebookofshaders.com/12/">Cellular Noise</a>, a good overview of the Voronoi algorithm, from the Book of Shaders.
+                <li><a href="https://www.alanzucconi.com/2015/02/24/to-voronoi-and-beyond/">To Voronoi and Beyond</a>, another introduction that also discusses other applications.
+                <li>Inigo Quilez wrote multiple articles: <a href="https://iquilezles.org/articles/cellularffx/">voronoi effect</a>,
+                    <a href="https://iquilezles.org/articles/smoothvoronoi/">smooth voronoi</a>,
+                    <a href="https://iquilezles.org/articles/voronoilines/">voronoi edges</a>, and
+                    <a href="https://iquilezles.org/articles/voronoise/">voronoise</a>.
+            </ul>
+        </div>
+        
+        <div class="card">
             <h2>Making-ofs</h2>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=Y3d8jR_IwYw">Atlas 64k Graphics Breakdown - Demoscene Stream</a>, 2019
@@ -513,6 +542,7 @@ function updateGallery() {
 
 updateGallery();
 youtubeOverlay.addEventListener("click", (e) => {
+    youtubePlayer.innerHTML = "";
     youtubeOverlay.style.display = "none";
 });
 
