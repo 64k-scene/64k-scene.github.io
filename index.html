@@ -421,22 +421,68 @@ const youtubeOverlay = document.getElementById("youtube-overlay");
 const youtubePlayer = document.getElementById("youtube-player");
 
 const allDemos = [{
-    title: "H - Immersion",
-    group: "Ctrl-Alt-Test",
-    screenshot: "https://content.pouet.net/files/screenshots/00069/00069654.jpg",
-    url: "http://ctrl-alt-test.fr/dl/cat-H-Immersion.zip",
-    youtube: "27PN1SsXbjM",
-    date: "2017",
-    pouet: "69654",
-}, {
-    title: "Offscreen Colonies",
-    group: "Conspiracy",
-    screenshot: "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
-    url: "https://conspiracy.hu/get/58/cns!oc.zip",
-    youtube: "PaNYOzwlVC8",
-    date: "2015",
-    pouet: "65342",
-}];
+    "pouet": "59106",
+    "title": "F - Felix's Workshop",
+    "group": "Ctrl-Alt-Test",
+    "youtube": "6CiF034IhgY",
+    "date": "2012-04-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00059/00059106.jpg",
+    "demozoo": "31428"
+},
+{
+    "pouet": "65342",
+    "title": "Offscreen Colonies",
+    "group": "Conspiracy",
+    "youtube": "PaNYOzwlVC8",
+    "date": "2015-04-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
+    "demozoo": "136150"
+},
+{
+    "pouet": "62935",
+    "title": "the timeless",
+    "group": "Mercury",
+    "youtube": "ie4u2i_5OdE",
+    "date": "2014-04-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00062/00062935.jpg",
+    "demozoo": "109116"
+},
+{
+    "pouet": "67113",
+    "title": "fermi paradox",
+    "group": "Mercury",
+    "youtube": "gX7ESVZ7T6Y",
+    "date": "2016-03-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00067/00067113.jpg",
+    "demozoo": "155057"
+},
+{
+    "pouet": "67106",
+    "title": "Darkness Lay Your Eyes Upon Me",
+    "group": "Conspiracy",
+    "youtube": "qRVTI2y0BBg",
+    "date": "2016-03-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00067/00067106.jpg",
+    "demozoo": "155058"
+},
+{
+    "pouet": "61204",
+    "title": "Turtles all the way down",
+    "group": "Brain Control",
+    "youtube": "sBKmqkh9bb8",
+    "date": "2013-03-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00061/00061204.jpg",
+    "demozoo": "59943"
+},
+{
+    "pouet": "88524",
+    "title": "Clean Slate",
+    "group": "Conspiracy",
+    "youtube": "O3T1-nadehU",
+    "date": "2021-04-15",
+    "screenshot": "https://content.pouet.net/files/screenshots/00088/00088524.jpg",
+    "demozoo": "292282"
+}]
 
 function showYouTube(id) {
     youtubePlayer.innerHTML = `<iframe class="youtube"
@@ -480,7 +526,8 @@ function createCard(data) {
 
     const date = document.createElement("div");
     date.className = "date";
-    date.innerText = data.date;
+    date.innerText = data.date.split("-")[0];
+    date.title = data.date;
     card.appendChild(date);
     return card;
 }
