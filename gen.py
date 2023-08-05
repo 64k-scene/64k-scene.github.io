@@ -76,7 +76,6 @@ if __name__ == "__main__":
         25776, # Dead Ringer
         25777, # Aesterozoa
         28479, # fr-052: platinum
-        285, # antimoney
         30055, # Frameskool - Breakpoint 2007 64k invit
         30637, # Outlined - Outline 2007 64k invitation
         5, # heaven seven
@@ -96,7 +95,6 @@ if __name__ == "__main__":
         55737, # B - Incubation
         55991, # Insert No Coins
         56099, # 0 to X in Y
-        5610, # PK is dead
         56868, # Pandora
         56871, # We Have Accidently Borrowed Your Votedisk
         56877, # fr-080: Strobo-plus-32767: pacemaker
@@ -117,7 +115,6 @@ if __name__ == "__main__":
         61213, # A l'ancienne
         61721, # 905509
         61727, # Parallaxelerator
-        61732, # fr-minus-017: coderpr0n
         62464, # luma
         62848, # Supermode
         62930, # Ooze
@@ -146,7 +143,6 @@ if __name__ == "__main__":
         78634, # trashpanda
         80996, # Atlas
         81015, # dope on wax
-        8758, # bakkslide 7 (win32)
         88524, # Clean Slate
         88530, # Deus Cervidae
         90435, # Domain

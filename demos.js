@@ -207,15 +207,6 @@ const allDemos = [
         "demozoo": "54286"
     } ,
     {
-        "pouet": "285",
-        "title": "antimoney",
-        "group": "Threestate",
-        "youtube": "c2oJe15HrYY",
-        "date": "2000-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00000/00000285.gif",
-        "demozoo": "49452"
-    } ,
-    {
         "pouet": "30055",
         "title": "Frameskool - Breakpoint 2007 64k invit",
         "group": "Equinox",
@@ -385,15 +376,6 @@ const allDemos = [
         "date": "2010-10-15",
         "screenshot": "https://content.pouet.net/files/screenshots/00056/00056099.jpg",
         "demozoo": "31632"
-    } ,
-    {
-        "pouet": "5610",
-        "title": "PK is dead",
-        "group": "Spinning Kids",
-        "youtube": "8Fyj_yTu5Rc",
-        "date": "2002-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00005/00005610.jpg",
-        "demozoo": "10434"
     } ,
     {
         "pouet": "56868",
@@ -574,15 +556,6 @@ const allDemos = [
         "date": "2013-08-15",
         "screenshot": "https://content.pouet.net/files/screenshots/00061/00061727.jpg",
         "demozoo": "83946"
-    } ,
-    {
-        "pouet": "61732",
-        "title": "fr-minus-017: coderpr0n",
-        "group": "Farbrausch",
-        "youtube": "hBolzDqfBGQ",
-        "date": "2013-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00061/00061732.png",
-        "demozoo": "83944"
     } ,
     {
         "pouet": "62464",
@@ -835,15 +808,6 @@ const allDemos = [
         "date": "2019-04-15",
         "screenshot": "https://content.pouet.net/files/screenshots/00081/00081015.jpg",
         "demozoo": "202451"
-    } ,
-    {
-        "pouet": "8758",
-        "title": "bakkslide 7 (win32)",
-        "group": "Hellcore and Omnicolour",
-        "youtube": "1XCrHonkNJA",
-        "date": "2003-02-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00008/00008758.jpg",
-        "demozoo": "45277"
     } ,
     {
         "pouet": "88524",
