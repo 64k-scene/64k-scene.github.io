@@ -1,488 +1,211 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>64k Scene</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>64k Scene</title>
 
-    <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(122deg, var(--main-bg-color) 0%, #1d2417 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: sans-serif;
-    color: var(--main-text-color);
-    letter-spacing: .05em;
-    font-size: 1rem;
+<link rel="stylesheet" href="style.css">
 
-    --border-color: #727272;
-    --main-text-color: #ddd;
-    --secondary-text-color: #8a8;
-    --panel-bg-color: #202020;
-    --panel-hover-bg-color: #101010;
-    --main-bg-color: #303030;
-}
+<header>
+    <nav>
+        <a href="#home">Gallery</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
 
-/* CSS pages - https://stackoverflow.com/questions/3354279/default-target-with-css/73473191 */
+<div id="youtube-overlay">
+    <div id="youtube-player"></div>
+</div>
 
-section, section:target ~ #gallery {
-  display: none;
-  padding: 4px;
-}
+<section id="resources">
 
-#gallery, section:target {
-  display: block;
-}
+    <div class="card">
+        <h2>Getting Started</h2>
 
-hr {
-    border-color: var(--border-color);
-    border-width: 1px;
-}
+        <h3>Community</h3>
+        <p>
+            There are multiple ways to join the 64k scene community, but one starting point can be the dedicated <strong>4k-64k</strong> channel on the <strong><a href="https://discord.gg/pZE5rAQrHx">Sizecoding Discord server</a></strong>.
+        </p>
+        <p>
+            There, you can share tips, ask questions and get acquainted with other creators.
+        </p>
+    </div>
+    
+    <div class="card">
+        <h2>Compression</h2>
 
-.card {
-    background: var(--panel-bg-color);
-    border: 1px var(--border-color) solid;
-    margin: 8px;
-    padding: 8px;
-    position: relative;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 8px auto;
-}
+        <h3>Windows executable packers</h3>
 
-.card:hover {
-    background: var(--panel-hover-bg-color);
-    transition: 0.2s;
-}
+        <p>
+            There are two main alternatives to compress native binaries on Windows: kkrunchy and squishy.
+        </p>
 
-.date {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 1.8rem;
-    padding: 10px;
-    border-radius: 8px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    color: #8a8;
-}
+        <h4>kkrunchy</h4>
+        <p>
+            <a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy</a> was written by Farbrausch and has been the de facto executable compression tool for 64k intros since its release in 2006. It is simple to use, fast and efficient, but gives little debugging information (Revival and BoyC have written a version giving more detail, which they've dubbed <a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy</a>). Note that the generated binaries are generally flagged as malware by antivirus vendors.
+        </p>
 
-h2 {
-    margin: 8px 0 0 0;
-    font-variant: small-caps;
-    font-size: 2rem;
-    font-weight: 500;
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>Windows 32 bits
+                <li><a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy project page</a> and <a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">source code</a><
+                <li><a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy project page and source code</a>
+                <li><a href="https://fgiesen.wordpress.com/2011/01/24/x86-code-compression-in-kkrunchy/">Article: x86 code compression in kkrunchy</a>
+            </ul>
+        </div>
 
-    color: #fff;
-}
+        <h4>squishy</h4>
+        <p>
+            <a href="https://logicoma.io/squishy/">squishy</a> is a recent and modern alternative to kkrunchy, written by Logicoma. It generally gets better results than kkrunchy in terms of final size (<a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">see the metrics</a>), but is also significantly slower, so it offers a different tradeoff.
+        </p>
 
-h3 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    color: #ccc;
-}
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>Windows 32 bits and 64 bits
+                <li>Currently the best compression
+                <li><a href="https://logicoma.io/squishy/">squishy project page</a>
+                <li><a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">squishy / kkrunchy comparison</a>
+                <li><a href="https://www.youtube.com/watch?v=O5LfE_qNzes">Revision 2020 seminar: modern 64k intro compression</a>
+                <li><a href="https://yupferris.github.io/blog/2020/08/31/c64-4k-intro-packer-deep-dive.html#squishys-decompressor-compressor">Blog post with some details about squishy</a>
+            </ul>
+        </div>
 
-.gallery h3 {
-    margin: 0.2em 0 0 0
-}
+        <h4>Crinkler</h4>
+        <p>
+            While <a href="https://github.com/runestubbe/Crinkler">Crinkler</a> is the de facto executable compression tool for 4k and 8k intros, its use for sizes like 32k and 64k is not recommended.
+        </p>
 
-h4 {
-    font-weight: 200;
-    font-size: 1.2rem;
-    color: #ccc;
-}
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>For 1k, 4k, 8k, but not for 64k
+                <li><a href="https://github.com/runestubbe/Crinkler">Crinkler project page and source code</a>
+            </ul>
+        </div>
 
-header {
-    background-color: var(--panel-bg-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 8px;
-}
 
-nav {
-    text-align: center;
-}
-nav a {
-    padding: 8px 16px;
-}
+        <h3>Shader minification</h3>
 
-a {
-    color: var(--secondary-text-color);
-}
+        <h4>Shader Minifier</h4>
+        <p>
+            <a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier</a> written by Ctrl-Alt-Test and is the de facto shader minification tool. It rewrites shader source code in a way that uses a smaller footprint and compresses well, and options are exposed to choose the transformations to apply. Note that it can be more difficult to use efficiently with multiple shaders.
+        </p>
 
-.group {
-    color: var(--secondary-text-color);
-}
-
-#demo-list .links {
-    border-top: 1px var(--border-color) solid;
-    padding: 8px 8px 0 8px;
-    vertical-align: middle;
-    margin: 16px 0 0 -8px;
-}
-
-.tool {
-    margin: 2em 2em 4em 2em;
-}
-
-.links ul {
-    list-style-type: "🡺";
-    padding-left: 2.2em;
-}
-
-.links li {
-    padding-left: 0.5em;
-}
-
-nav a, a.action-link {
-    border: 1px solid transparent;
-    display: inline-block;
-    text-decoration: none;
-    line-height: 22px;
-    color: var(--secondary-text-color);
-
-    font-size: 1rem;
-    font-variant: small-caps;
-
-    &:hover {
-        border-bottom: 1px solid var(--main-text-color);
-    }
-}
-
-p, li {
-    text-align: justify;
-    hyphens: auto;
-    line-height: 1.3;
-}
-
-li:not(:last-child) {
-    margin-bottom: 8px;  
-}
-
-.screenshot {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.info {
-    float: left;
-    width: 42px;
-    padding: 8px 8px 4px 0;
-}
-
-.youtube {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
-#youtube-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-}
-
-#youtube-player {
-    position: fixed;
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-color: #000;
-}
-
-</style>
-
-<body>
-
-    <header>
-        <nav>
-            <a href="#home">Gallery</a>
-            <a href="#resources">Resources</a>
-            <a href="#about">About</a>
-        </nav>
-        
-    </header>
-
-    <div id="youtube-overlay">
-        <div id="youtube-player"></div>
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>GLSL and HLSL
+                <li><a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier project page and source code</a>
+                <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a>
+            </ul>
+        </div>
     </div>
 
-    <section id="resources">
+    <div class="card">
+        <h2>Music</h2>
+        <p>It's common for the music to take around 16kB, but this can vary a lot. Instruments are often generated using sound
+            synthesis, and the list of notes is compressed.
+        </p>
+        <ul>
+            <li><a href="https://github.com/hzdgopher/64klang">64klang</a>
+            <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>
+            <li><a href="https://tunefish-synth.com/">Tunefish</a>
+            <li><a href="http://1337haxorz.de/products.html">v2</a>
+        </ul>
+    </div>
 
-        <div class="card">
-            <h2>Getting Started</h2>
+    <div class="card">
+        <h2>Making-ofs</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=Y3d8jR_IwYw">Atlas 64k Graphics Breakdown - Demoscene Stream</a>, 2019
+            <li><a href="https://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/">A dive into the making of Immersion</a>, 2018
+            <li><a href="http://www.lofibucket.com/articles/64k_intro.html">How a 64k intro is made</a>, 2017
+            <li><a href="https://geidav.wordpress.com/2013/04/14/making-of-turtles-all-the-way-down/">Making-of “Turtles all the way down”</a>, 2013
+            <li><a href="http://peisik.untergrund.net/zine/gaia_machina/">Making of Gaia Machina</a>, 2012
+            <li><a href="https://www.ctrl-alt-test.fr/2010/behind-incubation/">Behind Incubation</a>, 2010
+        </ul>
+    </div>
 
-            <h3>Community</h3>
+</section>
+
+<section id="about">
+    <div class="card">
+        <h2>What is this?</h2>
+        <p>
+            64k scene is a website about so called <em>64k intros</em>, a kind of size constrained digital art from the demoscene.
+        </p>
+
+        <p>
+            The demoscene is an international computer art subculture which explores artforms on computer platforms.
+            Often following self-imposed sets of rules or constraints, those artforms include graphics, music, game or animation, but the most typical one are the "demos".
+        </p>
+
+        <p>
+            Demos stand at the crossroad of short films, music videos and video games.
+            Although they present a non-interactive experience, often music driven, like a music video does, they are rendered in real-time like video games are.
+            Intended to awe their audience, they are a demonstration of programming, visual art and musical skills.
+        </p>
+
+        <p>
+            64k intros are demos with an added arbitrary limitation on the size: they consist of a single binary file of no more than 65,536 bytes.
+            With no extra assets, no network access and no extra libraries, they intend to further astonish the viewer with what can be achieved within such a small size.
+        </p>
+
+        <blockquote>
             <p>
-                There are multiple ways to join the 64k scene community, but one starting point can be the dedicated <strong>4k-64k</strong> channel on the <strong><a href="https://discord.gg/pZE5rAQrHx">Sizecoding Discord server</a></strong>.
+                One of the core competencies of the demoscene is size-coding, which tries to make the program code as lean as possible. In addition, the tracking of music as a programming-like composing technique and the hacking attitude aimed at mastering new hardware platforms play important roles in the scene. In all those instances, self-limitation is an important creative driver.
             </p>
-            <p>
-                There, you can share tips, ask questions and get acquainted with other creators.
-            </p>
-        </div>
-        
-        <div class="card">
-            <h2>Compression</h2>
+            <footer>
+                <a href="https://www.unesco.de/en/culture-and-nature/intangible-cultural-heritage/demoscene-culture-digital-real-time-animations">UNESCO Intangible Cultural Heritage page on the demoscene</a>.
+            </footer>
+        </blockquote>
 
-            <h3>Windows executable packers</h3>
+        <p>
+            Like other demoscene productions, 64k intros are usually shown during competitions at festivals known as demoparties.
+            But despite being released online, they rarely get the attention they deserve.
+            This website intends to show some noteworthy examples of the genre, and gather some documentation and resources for creators, newcomers and seasoned alike, who are interested in this kind of size coding.
+        </p>
 
-            <p>
-                There are two main alternatives to compress native binaries on Windows: kkrunchy and squishy.
-            </p>
+        <p>
+            You can contribute to this website by <a href="https://github.com/64k-scene/64k-scene.github.io/pulls">opening pull requests on GitHub</a>.
+        </p>
+    </div>
 
-            <h4>kkrunchy</h4>
-            <p>
-                <a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy</a> was written by Farbrausch and has been the de facto executable compression tool for 64k intros since its release in 2006. It is simple to use, fast and efficient, but gives little debugging information (Revival and BoyC have written a version giving more detail, which they've dubbed <a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy</a></li>). Note that the generated binaries are generally flagged as malware by antivirus vendors.
-            </p>
+</section>
 
-            <div class="links">
-                <h5>At a glance</h5>
-                <ul>
-                    <li>Windows 32 bits</li>
-                    <li><a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy project page</a> and <a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">source code</a></li>
-                    <li><a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy project page and source code</a></li>
-                    <li><a href="https://fgiesen.wordpress.com/2011/01/24/x86-code-compression-in-kkrunchy/">Article: x86 code compression in kkrunchy</a></li>
-                </ul>
-            </div>
+<section id="gallery">
 
-            <h4>squishy</h4>
-            <p>
-                <a href="https://logicoma.io/squishy/">squishy</a> is a recent and modern alternative to kkrunchy, written by Logicoma. It generally gets better results than kkrunchy in terms of final size (<a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">see the metrics</a>), but is also significantly slower, so it offers a different tradeoff.
-            </p>
+    <div class="card">
+        <h2>What is this?</h2>
+        <p>
+            The digital art creations below are “64k intros”: small computer programs of 65,536 bytes or less, that present a short
+            audio visual experience. They are a showcase of creativity and technical skills, using techniques like procedural
+            generation, sound synthesis, and real-time graphics.
+            <a href="#about">More info</a>.
+        </p>
+    </div>
 
-            <div class="links">
-                <h5>At a glance</h5>
-                <ul>
-                    <li>Windows 32 bits and 64 bits</li>
-                    <li>Currently the best compression</li>
-                    <li><a href="https://logicoma.io/squishy/">squishy project page</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">squishy / kkrunchy comparison</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=O5LfE_qNzes">Revision 2020 seminar: modern 64k intro compression</a></li>
-                    <li><a href="https://yupferris.github.io/blog/2020/08/31/c64-4k-intro-packer-deep-dive.html#squishys-decompressor-compressor">Blog post with some details about squishy</a></li>
-                </ul>
-            </div>
+    <div id="demo-list" class="gallery"></div>
+</section>
 
-            <h4>Crinkler</h4>
-            <p>
-                While <a href="https://github.com/runestubbe/Crinkler">Crinkler</a> is the de facto executable compression tool for 4k and 8k intros, its use for sizes like 32k and 64k is not recommended.
-            </p>
-
-            <div class="links">
-                <h5>At a glance</h5>
-                <ul>
-                    <li>For 1k, 4k, 8k, but not for 64k</li>
-                    <li><a href="https://github.com/runestubbe/Crinkler">Crinkler project page and source code</a></li>
-                </ul>
-            </div>
-
-
-            <h3>Shader minification</h3>
-
-            <h4>Shader Minifier</h4>
-            <p>
-                <a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier</a> written by Ctrl-Alt-Test and is the de facto shader minification tool. It rewrites shader source code in a way that uses a smaller footprint and compresses well, and options are exposed to choose the transformations to apply. Note that it can be more difficult to use efficiently with multiple shaders.
-            </p>
-
-            <div class="links">
-                <h5>At a glance</h5>
-                <ul>
-                    <li>GLSL and HLSL</li>
-                    <li><a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier project page and source code</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Music</h2>
-            <p>It's common for the music to take around 16kB, but this can vary a lot. Instruments are often generated using sound
-                synthesis, and the list of notes is compressed.
-            </p>
-            <ul>
-                <li><a href="https://github.com/hzdgopher/64klang">64klang</a>
-                <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>
-                <li><a href="https://tunefish-synth.com/">Tunefish</a>
-                <li><a href="http://1337haxorz.de/products.html">v2</a>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Texture</h2>
-
-            <p>
-                Procedural texture generation can be done either on the CPU or on the GPU. The article
-                <a href="https://conspiracy.hu/articles/9/">GPU Based Texture Synthesis</a> discusses some advantages of using the GPU.
-                Generating textures on the CPU can be slow, so you'll probably want to use multiple threads.
-            </p>
-
-            <p>General introduction to texture generation:</p>
-            <ul>
-                <li><a href="http://www.upvector.com/?section=Tutorials&subsection=Intro%20to%20Procedural%20Textures">Intro to
-                        Procedural Textures</a>
-                <li><a href="https://www.ctrl-alt-test.fr/2018/texturing-in-a-64kb-intro/">Texturing in a 64kB intro</a>, an overview of
-                    the texture generation in Immersion.
-            </ul>
-
-            <h3>Voronoi</h3>
-            <p>Voronoi diagrams are a simple tool for procedural generation and can be used in a variety of ways:</p>
-            <ul>
-                <li><a href="https://thebookofshaders.com/12/">Cellular Noise</a>, a good overview of the Voronoi algorithm, from the Book of Shaders.
-                <li><a href="https://www.alanzucconi.com/2015/02/24/to-voronoi-and-beyond/">To Voronoi and Beyond</a>, another introduction that also discusses other applications.
-                <li>Inigo Quilez wrote multiple articles: <a href="https://iquilezles.org/articles/cellularffx/">voronoi effect</a>,
-                    <a href="https://iquilezles.org/articles/smoothvoronoi/">smooth voronoi</a>,
-                    <a href="https://iquilezles.org/articles/voronoilines/">voronoi edges</a>, and
-                    <a href="https://iquilezles.org/articles/voronoise/">voronoise</a>.
-            </ul>
-        </div>
-        
-        <div class="card">
-            <h2>Making-ofs</h2>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=Y3d8jR_IwYw">Atlas 64k Graphics Breakdown - Demoscene Stream</a>, 2019
-                <li><a href="https://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/">A dive into the making of Immersion</a>, 2018
-                <li><a href="http://www.lofibucket.com/articles/64k_intro.html">How a 64k intro is made</a>, 2017
-                <li><a href="https://geidav.wordpress.com/2013/04/14/making-of-turtles-all-the-way-down/">Making-of “Turtles all the way down”</a>, 2013
-                <li><a href="http://peisik.untergrund.net/zine/gaia_machina/">Making of Gaia Machina</a>, 2012
-                <li><a href="https://www.ctrl-alt-test.fr/2010/behind-incubation/">Behind Incubation</a>, 2010
-            </ul>
-        </div>
-
-    </section>
-
-    <section id="about">
-        <div class="card">
-            <h2>What is this?</h2>
-            <p>
-                64k scene is a website about so called <em>64k intros</em>, a kind of size constrained digital art from the demoscene.
-            </p>
-
-            <p>
-                The demoscene is an international computer art subculture which explores artforms on computer platforms.
-                Often following self-imposed sets of rules or constraints, those artforms include graphics, music, game or animation, but the most typical one are the "demos".
-            </p>
-
-            <p>
-                Demos stand at the crossroad of short films, music videos and video games.
-                Although they present a non-interactive experience, often music driven, like a music video does, they are rendered in real-time like video games are.
-                Intended to awe their audience, they are a demonstration of programming, visual art and musical skills.
-            </p>
-
-            <p>
-                64k intros are demos with an added arbitrary limitation on the size: they consist of a single binary file of no more than 65,536 bytes.
-                With no extra assets, no network access and no extra libraries, they intend to further astonish the viewer with what can be achieved within such a small size.
-            </p>
-
-            <blockquote>
-                <p>
-                    One of the core competencies of the demoscene is size-coding, which tries to make the program code as lean as possible. In addition, the tracking of music as a programming-like composing technique and the hacking attitude aimed at mastering new hardware platforms play important roles in the scene. In all those instances, self-limitation is an important creative driver.
-                </p>
-                <footer>
-                    <a href="https://www.unesco.de/en/culture-and-nature/intangible-cultural-heritage/demoscene-culture-digital-real-time-animations">UNESCO Intangible Cultural Heritage page on the demoscene</a>.
-                </footer>
-            </blockquote>
-
-            <p>
-                Like other demoscene productions, 64k intros are usually shown during competitions at festivals known as demoparties.
-                But despite being released online, they rarely get the attention they deserve.
-                This website intends to show some noteworthy examples of the genre, and gather some documentation and resources for creators, newcomers and seasoned alike, who are interested in this kind of size coding.
-            </p>
-
-            <p>
-                You can contribute to this website by <a href="https://github.com/64k-scene/64k-scene.github.io/pulls">opening pull requests on GitHub</a>.
-            </p>
-        </div>
-
-    </section>
-
-    <section id="gallery">
-
-        <div class="card">
-            <h2>What is this?</h2>
-            <p>
-                The digital art creations below are “64k intros”: small computer programs of 65,536 bytes or less, that present a short
-                audio visual experience. They are a showcase of creativity and technical skills, using techniques like procedural
-                generation, sound synthesis, and real-time graphics.
-                <a href="#about">More info</a>.
-            </p>
-        </div>
-
-        <div id="demo-list" class="gallery"></div>
-    </section>
+<script src="./demos.js"></script>
 
 <script>
 const youtubeOverlay = document.getElementById("youtube-overlay");
 const youtubePlayer = document.getElementById("youtube-player");
 
-const allDemos = [{
-    "pouet": "59106",
-    "title": "F - Felix's Workshop",
-    "group": "Ctrl-Alt-Test",
-    "youtube": "6CiF034IhgY",
-    "date": "2012-04-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00059/00059106.jpg",
-    "demozoo": "31428"
-},
-{
-    "pouet": "65342",
-    "title": "Offscreen Colonies",
-    "group": "Conspiracy",
-    "youtube": "PaNYOzwlVC8",
-    "date": "2015-04-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
-    "demozoo": "136150"
-},
-{
-    "pouet": "62935",
-    "title": "the timeless",
-    "group": "Mercury",
-    "youtube": "ie4u2i_5OdE",
-    "date": "2014-04-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00062/00062935.jpg",
-    "demozoo": "109116"
-},
-{
-    "pouet": "67113",
-    "title": "fermi paradox",
-    "group": "Mercury",
-    "youtube": "gX7ESVZ7T6Y",
-    "date": "2016-03-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00067/00067113.jpg",
-    "demozoo": "155057"
-},
-{
-    "pouet": "67106",
-    "title": "Darkness Lay Your Eyes Upon Me",
-    "group": "Conspiracy",
-    "youtube": "qRVTI2y0BBg",
-    "date": "2016-03-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00067/00067106.jpg",
-    "demozoo": "155058"
-},
-{
-    "pouet": "61204",
-    "title": "Turtles all the way down",
-    "group": "Brain Control",
-    "youtube": "sBKmqkh9bb8",
-    "date": "2013-03-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00061/00061204.jpg",
-    "demozoo": "59943"
-},
-{
-    "pouet": "88524",
-    "title": "Clean Slate",
-    "group": "Conspiracy",
-    "youtube": "O3T1-nadehU",
-    "date": "2021-04-15",
-    "screenshot": "https://content.pouet.net/files/screenshots/00088/00088524.jpg",
-    "demozoo": "292282"
-}]
+const shuffleArray = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
 
 function showYouTube(id) {
     youtubePlayer.innerHTML = `<iframe class="youtube"
@@ -500,6 +223,7 @@ function createCard(data) {
     const img = document.createElement("img");
     img.className = "screenshot";
     img.src = data.screenshot;
+    img.setAttribute("loading", "lazy");
     img.onclick = () => {
         showYouTube(data.youtube);
     };
@@ -540,6 +264,7 @@ function updateGallery() {
     }
 }
 
+shuffleArray(allDemos);
 updateGallery();
 youtubeOverlay.addEventListener("click", (e) => {
     youtubePlayer.innerHTML = "";
@@ -547,6 +272,3 @@ youtubeOverlay.addEventListener("click", (e) => {
 });
 
 </script>
-
-</body>
-</html>
