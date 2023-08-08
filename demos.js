@@ -140,7 +140,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "btv2yWZxfVY",
         "date": "2006-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00024/00024472.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/71/71/91ee.14521.png",
         "demozoo": "3985"
     } ,
     {
@@ -221,7 +221,7 @@ const allDemos = [
         "group": "Exceed",
         "youtube": "-Qw5bavWxBs",
         "date": "2000-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00000/00000005.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/42/22/5404.131631.jpg",
         "demozoo": "15"
     } ,
     {
@@ -563,7 +563,7 @@ const allDemos = [
         "group": "Mercury",
         "youtube": "ie4u2i_5OdE",
         "date": "2014-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00062/00062935.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/ba/49/2cc5.57199.jpg",
         "demozoo": "109116"
     } ,
     {
@@ -599,7 +599,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "PaNYOzwlVC8",
         "date": "2015-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00065/00065342.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/40/1e/399b.102741.jpg",
         "demozoo": "136150"
     } ,
     {
@@ -653,7 +653,7 @@ const allDemos = [
         "group": "Mercury",
         "youtube": "gX7ESVZ7T6Y",
         "date": "2016-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00067/00067113.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/d5/4a/e056.104335.jpg",
         "demozoo": "155057"
     } ,
     {
@@ -671,7 +671,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "rWwNgVwQG1A",
         "date": "2016-10-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00068/00068375.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/21/3f/6711.117122.png",
         "demozoo": "164452"
     } ,
     {
@@ -743,7 +743,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "hE6SZeAhZdM",
         "date": "2018-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00075/00075713.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/c3/9b/fdbd.159920.jpg",
         "demozoo": "185202"
     } ,
     {
