@@ -5,7 +5,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "CTzQekbUINI",
         "date": "2003-07-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00010/00010130.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/d5/fe/b0c6.14411.png",
         "demozoo": "268"
     } ,
     {
@@ -50,7 +50,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "3rhmbMn83VE",
         "date": "2004-01-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00011/00011452.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/c7/c8/2e5e.14438.png",
         "demozoo": "25086"
     } ,
     {
@@ -86,7 +86,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "LJaYJQB2tc0",
         "date": "2004-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00013/00013030.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/90/74/cfee.14495.png",
         "demozoo": "9524"
     } ,
     {
@@ -95,7 +95,7 @@ const allDemos = [
         "group": "Hoodlum and Tristar & Red Sector Inc. and Paradox",
         "youtube": "tTN81zaiP3U",
         "date": "2004-11-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00014/00014107.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/31/2c/66b6.154362.png",
         "demozoo": "8425"
     } ,
     {
@@ -104,7 +104,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "2eJWQzygVMg",
         "date": "2005-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00016/00016326.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/a4/c5/28cb.14506.png",
         "demozoo": "3795"
     } ,
     {
@@ -176,7 +176,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "gfk5Mqy3gpA",
         "date": "2006-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00025/00025774.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/9e/e2/d1f3.14363.png",
         "demozoo": "10096"
     } ,
     {
@@ -221,7 +221,7 @@ const allDemos = [
         "group": "Orb",
         "youtube": "CH3hPFv_too",
         "date": "2007-05-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00030/00030637.png",
+        "screenshot": "https://media.demozoo.org/screens/o/3b/75/ca3f.170620.jpg",
         "demozoo": "9328"
     } ,
     {
@@ -266,7 +266,7 @@ const allDemos = [
         "group": "ate bit",
         "youtube": "jhXHZ9ZfsKI",
         "date": "2009-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00053/00053646.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/da/77/7948.322231.jpg",
         "demozoo": "71683"
     } ,
     {
@@ -311,7 +311,7 @@ const allDemos = [
         "group": "United Force and Digital Dynamite",
         "youtube": "HFbS58IebrA",
         "date": "2010-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00055/00055535.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/15/50/d136.106306.png",
         "demozoo": "31633"
     } ,
     {
@@ -365,7 +365,7 @@ const allDemos = [
         "group": "Razor 1911",
         "youtube": "bR4c0R10678",
         "date": "2010-10-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00055/00055991.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/8f/fb/fbcc.469.png",
         "demozoo": "302"
     } ,
     {
@@ -392,17 +392,8 @@ const allDemos = [
         "group": "Razor 1911",
         "youtube": "ji2NCE_yPLQ",
         "date": "2011-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00056/00056871.png",
+        "screenshot": "https://media.demozoo.org/screens/o/5d/e0/c339.138822.png",
         "demozoo": "4700"
-    } ,
-    {
-        "pouet": "56877",
-        "title": "fr-080: Strobo-plus-32767: pacemaker",
-        "group": "Farbrausch and Stroboholics",
-        "youtube": "5f7ABPnTOiU",
-        "date": "2011-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00056/00056877.jpg",
-        "demozoo": "4701"
     } ,
     {
         "pouet": "57286",
@@ -446,7 +437,7 @@ const allDemos = [
         "group": "Mercury",
         "youtube": "I8pRJ0q8OlY",
         "date": "2011-12-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00058/00058262.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/77/02/1aec.7231.jpg",
         "demozoo": "23405"
     } ,
     {
@@ -455,7 +446,7 @@ const allDemos = [
         "group": "Razor 1911",
         "youtube": "IFXIGHOElrE",
         "date": "2012-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00059/00059105.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/1c/e9/813d.138813.png",
         "demozoo": "31424"
     } ,
     {
@@ -473,7 +464,7 @@ const allDemos = [
         "group": "Approximate",
         "youtube": "wir8sSDfW5Q",
         "date": "2012-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00059/00059107.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/53/cf/ea1a.73467.jpg",
         "demozoo": "31427"
     } ,
     {
@@ -491,7 +482,7 @@ const allDemos = [
         "group": "Fnuque",
         "youtube": "HSorgRpp3Ls",
         "date": "2012-07-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00059/00059469.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/0d/7f/c27e.24384.png",
         "demozoo": "36803"
     } ,
     {
@@ -518,7 +509,7 @@ const allDemos = [
         "group": "Brain Control",
         "youtube": "sBKmqkh9bb8",
         "date": "2013-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00061/00061204.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/43/57/92c2.121880.jpg",
         "demozoo": "59943"
     } ,
     {
@@ -529,15 +520,6 @@ const allDemos = [
         "date": "2013-03-15",
         "screenshot": "https://content.pouet.net/files/screenshots/00061/00061206.jpg",
         "demozoo": "59945"
-    } ,
-    {
-        "pouet": "61213",
-        "title": "A l'ancienne",
-        "group": "X-men",
-        "youtube": "rH2b48ZsGhc",
-        "date": "2013-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00061/00061213.png",
-        "demozoo": "59944"
     } ,
     {
         "pouet": "61721",
@@ -644,7 +626,7 @@ const allDemos = [
         "group": "z brothers",
         "youtube": "v_zZkT--AhU",
         "date": "2015-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00066/00066297.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/96/5d/80e2.131738.jpg",
         "demozoo": "144603"
     } ,
     {
@@ -653,7 +635,7 @@ const allDemos = [
         "group": "Inque",
         "youtube": "wj1jgTrTnog",
         "date": "2015-10-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00066/00066495.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/2f/7e/7d98.176664.jpg",
         "demozoo": "147556"
     } ,
     {
@@ -716,7 +698,7 @@ const allDemos = [
         "group": "Macau Exports",
         "youtube": "yei3mJm33SQ",
         "date": "2017-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00069/00069652.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/57/4e/b0b8.132272.png",
         "demozoo": "170756"
     } ,
     {
@@ -734,7 +716,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "GjuridCR2Fo",
         "date": "2017-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00069/00069658.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/53/91/cb3c.132627.jpg",
         "demozoo": "170759"
     } ,
     {
@@ -743,7 +725,7 @@ const allDemos = [
         "group": "Poo-Brain",
         "youtube": "rsZHBJdaz-Y",
         "date": "2017-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00069/00069669.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/24/71/edc1.132760.jpg",
         "demozoo": "170753"
     } ,
     {
@@ -761,7 +743,7 @@ const allDemos = [
         "group": "Poo-Brain",
         "youtube": "EIp7ffUrUCs",
         "date": "2017-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00071/00071570.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/d1/7a/012a.146494.jpg",
         "demozoo": "177350"
     } ,
     {
@@ -788,7 +770,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "gVHktHeYsfs",
         "date": "2018-10-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00078/00078634.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/ee/33/30e8.179113.jpg",
         "demozoo": "194842"
     } ,
     {
@@ -869,7 +851,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "4lWbKcPEy_w",
         "date": "2003-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00009/00009438.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/d4/8a/c13f.14389.png",
         "demozoo": "267"
     } ,
 ];
