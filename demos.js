@@ -23,7 +23,7 @@ const allDemos = [
         "group": "Farbrausch and Haujobb",
         "youtube": "rGHpGFH8Scs",
         "date": "2003-11-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00010/00010999.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/a0/9b/3911.18311.jpg",
         "demozoo": "66914"
     } ,
     {
@@ -86,17 +86,8 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "LJaYJQB2tc0",
         "date": "2004-08-15",
-        "screenshot": "https://media.demozoo.org/screens/o/90/74/cfee.14495.png",
+        "screenshot": "https://media.demozoo.org/screens/o/02/69/aa7d.14468.png",
         "demozoo": "9524"
-    } ,
-    {
-        "pouet": "14107",
-        "title": "hoodlum cracktro #1",
-        "group": "Hoodlum and Tristar & Red Sector Inc. and Paradox",
-        "youtube": "tTN81zaiP3U",
-        "date": "2004-11-15",
-        "screenshot": "https://media.demozoo.org/screens/o/31/2c/66b6.154362.png",
-        "demozoo": "8425"
     } ,
     {
         "pouet": "16326",
@@ -194,7 +185,7 @@ const allDemos = [
         "group": "Kewlers",
         "youtube": "ZWCQfg2IuUE",
         "date": "2006-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00025/00025777.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/18/b7/f09e.66955.jpg",
         "demozoo": "8542"
     } ,
     {
@@ -203,7 +194,7 @@ const allDemos = [
         "group": "Farbrausch",
         "youtube": "Ggjz1V0pOjw",
         "date": "2006-12-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00028/00028479.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/42/e7/2140.55956.jpg",
         "demozoo": "54286"
     } ,
     {
@@ -212,7 +203,7 @@ const allDemos = [
         "group": "Equinox",
         "youtube": "mz-SWtD3x7Y",
         "date": "2007-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00030/00030055.png",
+        "screenshot": "https://media.demozoo.org/screens/o/2c/59/7950.58679.jpg",
         "demozoo": "8026"
     } ,
     {
@@ -248,7 +239,7 @@ const allDemos = [
         "group": "Still and Conspiracy",
         "youtube": "m07152NHFhA",
         "date": "2008-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00050/00050135.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/34/44/a533.14542.png",
         "demozoo": "4865"
     } ,
     {
@@ -257,7 +248,7 @@ const allDemos = [
         "group": "Fairlight",
         "youtube": "UyKtZT4GPus",
         "date": "2008-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00051/00051125.png",
+        "screenshot": "https://media.demozoo.org/screens/o/8e/d8/bb47.754.png",
         "demozoo": "350"
     } ,
     {
@@ -275,7 +266,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "pFfKrdheLRU",
         "date": "2009-10-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00053/00053938.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/26/f1/b77d.14584.png",
         "demozoo": "59651"
     } ,
     {
@@ -410,7 +401,7 @@ const allDemos = [
         "group": "Fairlight and Alcatraz",
         "youtube": "4oPpcSZa3NE",
         "date": "2011-08-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00057/00057449.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/2e/4b/9c68.4954.png",
         "demozoo": "17911"
     } ,
     {
@@ -437,7 +428,7 @@ const allDemos = [
         "group": "Mercury",
         "youtube": "I8pRJ0q8OlY",
         "date": "2011-12-15",
-        "screenshot": "https://media.demozoo.org/screens/o/77/02/1aec.7231.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/05/07/4df5.7241.jpg",
         "demozoo": "23405"
     } ,
     {
@@ -473,7 +464,7 @@ const allDemos = [
         "group": "Quite",
         "youtube": "7-0rCPqls80",
         "date": "2012-07-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00059/00059451.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/47/51/0045.8607.jpg",
         "demozoo": "36535"
     } ,
     {
@@ -671,7 +662,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "20vPbH6UWIc",
         "date": "2016-09-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00068/00068147.png",
+        "screenshot": "https://media.demozoo.org/screens/o/27/2f/3270.114404.png",
         "demozoo": "163097"
     } ,
     {
@@ -716,7 +707,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "GjuridCR2Fo",
         "date": "2017-04-15",
-        "screenshot": "https://media.demozoo.org/screens/o/53/91/cb3c.132627.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/42/99/a8e5.132639.jpg",
         "demozoo": "170759"
     } ,
     {
@@ -743,7 +734,7 @@ const allDemos = [
         "group": "Poo-Brain",
         "youtube": "EIp7ffUrUCs",
         "date": "2017-08-15",
-        "screenshot": "https://media.demozoo.org/screens/o/d1/7a/012a.146494.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/22/14/5827.146493.jpg",
         "demozoo": "177350"
     } ,
     {
@@ -788,7 +779,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "QhqT0DhV9yE",
         "date": "2019-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00081/00081015.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/f9/84/5b2a.184454.jpg",
         "demozoo": "202451"
     } ,
     {
