@@ -644,7 +644,7 @@ const allDemos = [
         "group": "Conspiracy",
         "youtube": "qRVTI2y0BBg",
         "date": "2016-03-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00067/00067106.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/40/4b/21c2.104219.jpg",
         "demozoo": "155058"
     } ,
     {
@@ -770,7 +770,7 @@ const allDemos = [
         "group": "Monad and Macau Exports",
         "youtube": "mVdISz9-iFc",
         "date": "2019-04-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00080/00080996.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/e7/fa/ccef.185272.png",
         "demozoo": "202450"
     } ,
     {
@@ -815,7 +815,7 @@ const allDemos = [
         "group": "Logicoma",
         "youtube": "bFZ9rx0qT5Y",
         "date": "2022-01-15",
-        "screenshot": "https://content.pouet.net/files/screenshots/00090/00090874.jpg",
+        "screenshot": "https://media.demozoo.org/screens/o/fb/c2/baef.304504.jpg",
         "demozoo": "304945"
     } ,
     {
