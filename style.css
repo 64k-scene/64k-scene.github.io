@@ -19,13 +19,8 @@ body, html {
 
 /* CSS pages - https://stackoverflow.com/questions/3354279/default-target-with-css/73473191 */
 
-section, section:target ~ #gallery {
-  display: none;
+section {
   padding: 4px;
-}
-
-#gallery, section:target {
-  display: block;
 }
 
 hr {
@@ -105,13 +100,6 @@ a {
 
 .group {
     color: var(--secondary-text-color);
-}
-
-#demo-list .links {
-    border-top: 1px var(--border-color) solid;
-    padding: 8px 8px 0 8px;
-    vertical-align: middle;
-    margin: 16px 0 0 -8px;
 }
 
 .tool {
