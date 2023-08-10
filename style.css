@@ -32,16 +32,25 @@ hr {
     background: var(--panel-bg-color);
     border: 1px var(--border-color) solid;
     margin: 8px;
-    padding: 8px;
+    padding: 4px 12px;
     position: relative;
     border-radius: 8px;
     max-width: 800px;
     margin: 8px auto;
+    box-sizing: border-box;
+}
+
+.card.demo {
+    padding: 0px;
 }
 
 .card:hover {
     background: var(--panel-hover-bg-color);
     transition: 0.2s;
+}
+
+.details {
+    padding: 0px 8px 8px 8px;
 }
 
 .date {
@@ -137,7 +146,7 @@ p, li {
 }
 
 li:not(:last-child) {
-    margin-bottom: 8px;  
+    margin-bottom: 8px;
 }
 
 .screenshot {
@@ -150,7 +159,7 @@ li:not(:last-child) {
 .info {
     float: left;
     width: 42px;
-    padding: 8px 8px 4px 0;
+    padding: 4px 8px 4px 0;
 }
 
 .youtube {

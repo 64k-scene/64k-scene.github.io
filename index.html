@@ -60,8 +60,7 @@ function showYouTube(id) {
 
 function createCard(data) {
     const card = document.createElement("div");
-    card.className = "card";
-    const preview = document.createElement("div");
+    card.className = "card demo";
     const img = document.createElement("img");
     img.className = "screenshot";
     img.src = data.screenshot;
@@ -69,8 +68,9 @@ function createCard(data) {
     img.onclick = () => {
         showYouTube(data.youtube);
     };
-    preview.appendChild(img);
-    card.appendChild(preview);
+    card.appendChild(img);
+
+    const details = document.createElement("div");
 
     const infoLink = document.createElement("a");
     infoLink.href = "https://www.pouet.net/prod.php?which=" + data.pouet;
@@ -79,22 +79,24 @@ function createCard(data) {
     info.title = "View details on pouet.net";
     info.src = "img/information.png";
     infoLink.appendChild(info);
-    card.appendChild(infoLink);
+    details.appendChild(infoLink);
 
+    details.className = "details";
     const title = document.createElement("h3");
     title.innerText = data.title;
-    card.appendChild(title);
+    details.appendChild(title);
 
     const group = document.createElement("div");
     group.className = "group";
     group.innerText = "by " + data.group;
-    card.appendChild(group);
+    details.appendChild(group);
 
     const date = document.createElement("div");
     date.className = "date";
     date.innerText = data.date.split("-")[0];
     date.title = data.date;
-    card.appendChild(date);
+    details.appendChild(date);
+    card.appendChild(details);
     return card;
 }
 
