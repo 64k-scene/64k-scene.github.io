@@ -99,6 +99,24 @@
                 <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a>
             </ul>
         </div>
+
+        <h3>Tips</h3>
+
+        <p>
+            Compression changes how we need to think about size coding. Reducing the size of the compiler output doesn't
+            mean the compressed file will be smaller. If you're short on space, we recommend that you check the compressed size
+            regularly to avoid surprises (e.g. you can include it in the commit messages).
+        </p>
+        <p>Some techniques can be useful:</p>
+        <ul>
+            <li>Group data by type, so that similar things are packed together.
+            <li>Repetitive data doesn't take much space. Sometimes, the smart "Don't Repeat Youself" principle can be
+                counterproductive.
+            <li>Try <a href="https://en.wikipedia.org/wiki/Delta_encoding">delta encoding</a>.
+            <li><a href="https://www.ctrl-alt-test.fr/2018/making-floating-point-numbers-smaller/">Make the floats smaller</a>.
+        </ul>
+        You may also read <a href="https://conspiracy.hu/articles/6/">Why are SMF files smaller?</a> about packing the music
+        data.
     </div>
 
     <div class="card">
@@ -106,11 +124,47 @@
         <p>It's common for the music to take around 16kB, but this can vary a lot. Instruments are often generated using sound
             synthesis, and the list of notes is compressed.
         </p>
+        <p>
+            Multiple synths have been published that were specifically designed for 64k intros:
+        </p>
         <ul>
-            <li><a href="https://github.com/hzdgopher/64klang">64klang</a>
-            <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>
-            <li><a href="https://tunefish-synth.com/">Tunefish</a>
-            <li><a href="http://1337haxorz.de/products.html">v2</a>
+            <li><a href="https://github.com/hzdgopher/64klang">64klang</a>, an extended version of 4klang (a popular synth for 4k
+                intros).
+            <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>, used in Logicoma intros and many others.
+            <li><a href="https://tunefish-synth.com/">Tunefish</a>, used in Brain Control intros.
+            <li><a href="http://1337haxorz.de/products.html">v2</a> was a popular option around 2005-2015. It uses less
+                CPU than the alternatives above, but it can feel slightly outdated.
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Texture</h2>
+
+        <p>
+            Procedural texture generation can be done either on the CPU or on the GPU. The article
+            <a href="https://conspiracy.hu/articles/9/">GPU Based Texture Synthesis</a> discusses some advantages of using the GPU.
+            Generating textures on the CPU can be slow, so you'll probably want to use multiple threads.
+        </p>
+
+        <p>General introduction to texture generation:</p>
+        <ul>
+            <li><a href="http://www.upvector.com/?section=Tutorials&subsection=Intro%20to%20Procedural%20Textures">Intro to
+                    Procedural Textures</a>
+            <li><a href="https://www.ctrl-alt-test.fr/2018/texturing-in-a-64kb-intro/">Texturing in a 64kB intro</a>, an overview of
+                the texture generation in Immersion.
+        </ul>
+
+        <h3>Voronoi</h3>
+        <p>Voronoi diagrams are a simple tool for procedural generation and can be used in a variety of ways:</p>
+        <ul>
+            <li><a href="https://thebookofshaders.com/12/">Cellular Noise</a>, a good overview of the Voronoi algorithm, from the Book of Shaders.
+            <li><a href="https://www.alanzucconi.com/2015/02/24/to-voronoi-and-beyond/">To Voronoi and Beyond</a>, another introduction that also discusses other applications.
+            <li>Inigo Quilez wrote multiple articles: <a href="https://iquilezles.org/articles/cellularffx/">voronoi effect</a>,
+                <a href="https://iquilezles.org/articles/smoothvoronoi/">smooth voronoi</a>,
+                <a href="https://iquilezles.org/articles/voronoilines/">voronoi edges</a>, and
+                <a href="https://iquilezles.org/articles/voronoise/">voronoise</a>.
+            <li><a href="https://fgiesen.wordpress.com/2010/03/28/how-to-generate-cellular-textures/">How to generate cellular
+                    textures</a> discusses the implementation and optimizations.
         </ul>
     </div>
 
@@ -122,6 +176,7 @@
             <li><a href="http://www.lofibucket.com/articles/64k_intro.html">How a 64k intro is made</a>, 2017
             <li><a href="https://geidav.wordpress.com/2013/04/14/making-of-turtles-all-the-way-down/">Making-of “Turtles all the way down”</a>, 2013
             <li><a href="http://peisik.untergrund.net/zine/gaia_machina/">Making of Gaia Machina</a>, 2012
+            <li><a href="https://fgiesen.wordpress.com/2012/02/13/debris-opening-the-box/">Debris: Opening the box</a>, 2012
             <li><a href="https://www.ctrl-alt-test.fr/2010/behind-incubation/">Behind Incubation</a>, 2010
         </ul>
     </div>
