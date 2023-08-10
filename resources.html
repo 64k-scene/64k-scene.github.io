@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>64k Scene</title>
+
+<link rel="stylesheet" href="style.css">
+
+<header>
+    <nav>
+        <a href="index.html">Gallery</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Getting Started</h2>
+
+        <h3>Community</h3>
+        <p>
+            There are multiple ways to join the 64k scene community, but one starting point can be the dedicated <strong>4k-64k</strong> channel on the <strong><a href="https://discord.gg/pZE5rAQrHx">Sizecoding Discord server</a></strong>.
+        </p>
+        <p>
+            There, you can share tips, ask questions and get acquainted with other creators.
+        </p>
+    </div>
+    
+    <div class="card">
+        <h2>Compression</h2>
+
+        <h3>Windows executable packers</h3>
+
+        <p>
+            There are two main alternatives to compress native binaries on Windows: kkrunchy and squishy.
+        </p>
+
+        <h4>kkrunchy</h4>
+        <p>
+            <a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy</a> was written by Farbrausch and has been the de facto executable compression tool for 64k intros since its release in 2006. It is simple to use, fast and efficient, but gives little debugging information (Revival and BoyC have written a version giving more detail, which they've dubbed <a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy</a>). Note that the generated binaries are generally flagged as malware by antivirus vendors.
+        </p>
+
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>Windows 32 bits
+                <li><a href="http://www.farbrausch.de/~fg/kkrunchy/">kkrunchy project page</a> and <a href="https://github.com/farbrausch/fr_public/tree/master/kkrunchy">source code</a><
+                <li><a href="https://github.com/ConspiracyHu/rekkrunchy-with-analytics">rekkrunchy project page and source code</a>
+                <li><a href="https://fgiesen.wordpress.com/2011/01/24/x86-code-compression-in-kkrunchy/">Article: x86 code compression in kkrunchy</a>
+            </ul>
+        </div>
+
+        <h4>squishy</h4>
+        <p>
+            <a href="https://logicoma.io/squishy/">squishy</a> is a recent and modern alternative to kkrunchy, written by Logicoma. It generally gets better results than kkrunchy in terms of final size (<a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">see the metrics</a>), but is also significantly slower, so it offers a different tradeoff.
+        </p>
+
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>Windows 32 bits and 64 bits
+                <li>Currently the best compression
+                <li><a href="https://logicoma.io/squishy/">squishy project page</a>
+                <li><a href="https://docs.google.com/spreadsheets/d/1tbQ7fgnG5DAI06eFoXvkE8fZKnrO4SpYQrrBbsmwdWk/edit?usp=sharing">squishy / kkrunchy comparison</a>
+                <li><a href="https://www.youtube.com/watch?v=O5LfE_qNzes">Revision 2020 seminar: modern 64k intro compression</a>
+                <li><a href="https://yupferris.github.io/blog/2020/08/31/c64-4k-intro-packer-deep-dive.html#squishys-decompressor-compressor">Blog post with some details about squishy</a>
+            </ul>
+        </div>
+
+        <h4>Crinkler</h4>
+        <p>
+            While <a href="https://github.com/runestubbe/Crinkler">Crinkler</a> is the de facto executable compression tool for 4k and 8k intros, its use for sizes like 32k and 64k is not recommended.
+        </p>
+
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>For 1k, 4k, 8k, but not for 64k
+                <li><a href="https://github.com/runestubbe/Crinkler">Crinkler project page and source code</a>
+            </ul>
+        </div>
+
+
+        <h3>Shader minification</h3>
+
+        <h4>Shader Minifier</h4>
+        <p>
+            <a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier</a> written by Ctrl-Alt-Test and is the de facto shader minification tool. It rewrites shader source code in a way that uses a smaller footprint and compresses well, and options are exposed to choose the transformations to apply. Note that it can be more difficult to use efficiently with multiple shaders.
+        </p>
+
+        <div class="links">
+            <h5>At a glance</h5>
+            <ul>
+                <li>GLSL and HLSL
+                <li><a href="https://github.com/laurentlb/Shader_Minifier">Shader Minifier project page and source code</a>
+                <li><a href="https://www.youtube.com/watch?v=S-VDVgCBy-M">Revision 2023 seminar: Shader minification for 4k - 64k intros</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Music</h2>
+        <p>It's common for the music to take around 16kB, but this can vary a lot. Instruments are often generated using sound
+            synthesis, and the list of notes is compressed.
+        </p>
+        <ul>
+            <li><a href="https://github.com/hzdgopher/64klang">64klang</a>
+            <li><a href="https://github.com/logicomacorp/WaveSabre">WaveSabre</a>
+            <li><a href="https://tunefish-synth.com/">Tunefish</a>
+            <li><a href="http://1337haxorz.de/products.html">v2</a>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Making-ofs</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=Y3d8jR_IwYw">Atlas 64k Graphics Breakdown - Demoscene Stream</a>, 2019
+            <li><a href="https://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/">A dive into the making of Immersion</a>, 2018
+            <li><a href="http://www.lofibucket.com/articles/64k_intro.html">How a 64k intro is made</a>, 2017
+            <li><a href="https://geidav.wordpress.com/2013/04/14/making-of-turtles-all-the-way-down/">Making-of “Turtles all the way down”</a>, 2013
+            <li><a href="http://peisik.untergrund.net/zine/gaia_machina/">Making of Gaia Machina</a>, 2012
+            <li><a href="https://www.ctrl-alt-test.fr/2010/behind-incubation/">Behind Incubation</a>, 2010
+        </ul>
+    </div>
+
+</section>
