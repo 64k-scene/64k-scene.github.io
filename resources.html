@@ -169,6 +169,50 @@
     </div>
 
     <div class="card">
+        <h2>Meshes</h2>
+
+        <p>Some techniques that can be useful for including meshes in a 64k intro:</p>
+        <ul>
+            <li><a href="https://iquilezles.org/articles/meshcompression/">Mesh compression</a>
+            <li>The <a href="https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface">catmull clark subdivision algorithm</a>
+                is useful to generate smooth surfaces from a low-poly mesh
+                (see <a href="https://iquilezles.org/articles/breakpoint2007/bp2007.pdf">this presentation</a> for a code sample).
+            <li><a href="https://en.wikipedia.org/wiki/Marching_cubes">Marching cubes</a> can be used to convert a signed distance
+                function into a traditional mesh.
+            <li><a href=https://en.wikipedia.org/wiki/L-system">L-Systems</a> are a simple way to generate recursive objects, such as trees.
+        </ul>
+        <p>You may also check:</p>
+        <ul>
+            <li><a href="https://qoob.weebly.com/features.html">Qoob</a> a tiny modeling tool that can be used as
+                an inspiration.
+            <li><a href="https://fgiesen.wordpress.com/2012/02/13/debris-opening-the-box/">The series of articles about Debris</a>
+                also contains information about mesh generation.
+            <li>The article <a href="https://www.ctrl-alt-test.fr/2023/procedural-3d-mesh-generation-in-a-64kb-intro/">Procedural 3D
+                mesh generation in a 64kB intro</a>
+        </ul>
+    </p>
+    </div>
+
+    <div class="card">
+        <h2>Raymarching</h2>
+
+        <p>
+            Raymarching is a rendering technique that is extremely popular among 4k intros developers and the <a
+                href="https://www.shadertoy.com/">ShaderToy</a> community. It is also commonly used for 64k intros.
+        </p>
+
+        <ul>
+            <li>See the article <a href="https://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/">
+                Ray Marching and Signed Distance Functions</a> for a good introduction.
+            <li>Many <a href="https://iquilezles.org/articles/">articles from Inigo Quilez</a> discuss raymarching</a>.
+                <ul>
+                    <li>In particular, the <a href="https://iquilezles.org/articles/distfunctions/">distance functions page</a> is a good reference.
+                </ul>
+            <li>The <a href="https://mercury.sexy/hg_sdf/">Mercury SDF toolbox</a> is very useful.
+        </ul>
+    </div>
+
+    <div class="card">
         <h2>Making-ofs</h2>
         <ul>
             <li><a href="https://www.youtube.com/watch?v=Y3d8jR_IwYw">Atlas 64k Graphics Breakdown - Demoscene Stream</a>, 2019
