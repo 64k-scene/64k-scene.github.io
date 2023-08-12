@@ -124,7 +124,8 @@ a {
     padding-left: 0.5em;
 }
 
-nav a, a.action-link {
+nav a, .action-link {
+    cursor: pointer;
     border: 1px solid transparent;
     display: inline-block;
     text-decoration: none;
