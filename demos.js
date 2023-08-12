@@ -845,4 +845,40 @@ const allDemos = [
         "screenshot": "https://media.demozoo.org/screens/o/d4/8a/c13f.14389.png",
         "demozoo": "267"
     } ,
+    {
+        "pouet": "81018",
+        "title": "The Jaderoom",
+        "group": "LJ and Alcatraz",
+        "youtube": "pdv5-qmZVrk",
+        "date": "2019-04-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00081/00081018.jpg",
+        "demozoo": "202452"
+    } ,
+    {
+        "pouet": "86224",
+        "title": "Smoothie",
+        "group": "Ninjadev",
+        "youtube": "la20wrrNUm8",
+        "date": "2020-07-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00086/00086224.png",
+        "demozoo": "280566"
+    } ,
+    {
+        "pouet": "53833",
+        "title": "ephemera",
+        "group": "Approximate",
+        "youtube": "KWNyYh10t5Y",
+        "date": "2009-09-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00053/00053833.jpg",
+        "demozoo": "47716"
+    } ,
+    {
+        "pouet": "88544",
+        "title": "Condition",
+        "group": "FMS_Cat",
+        "youtube": "eZjd4aLmfus",
+        "date": "2021-04-15",
+        "screenshot": "https://media.demozoo.org/screens/o/2d/7a/7c64.288726.jpg",
+        "demozoo": "292275"
+    } ,
 ];
