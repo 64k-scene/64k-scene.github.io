@@ -83,6 +83,7 @@ if __name__ == "__main__":
         50135, # Invoke
         51125, # Panic Room
         53646, # Transform
+        53833, # ephemera
         53938, # Actuator
         54556, # imagine
         55146, # Haujobb BBQ 2010
@@ -143,8 +144,11 @@ if __name__ == "__main__":
         78634, # trashpanda
         80996, # Atlas
         81015, # dope on wax
+        81018, # The Jaderoom
+        86224, # Smoothie
         88524, # Clean Slate
         88530, # Deus Cervidae
+        88544, # Condition
         90435, # Domain
         90874, # astrophage (Black Valley 2022 invite)
         94135, # 0b5vr GLSL Techno Live Set
