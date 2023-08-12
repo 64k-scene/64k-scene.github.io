@@ -22,13 +22,16 @@
 <section>
 
     <div class="card">
-        <h2>What is this?</h2>
         <p>
             The digital art creations below are “64k intros”: small computer programs of 65,536 bytes or less, that present a short
             audio visual experience. They are a showcase of creativity and technical skills, using techniques like procedural
             generation, sound synthesis, and real-time graphics.
             <a href="#about">More info</a>.
         </p>
+
+        <div style="text-align: center;">
+            <span class="action-link" onclick="sortDate();">Sort by date</span> / <span class="action-link" onclick="sortRandom();">Shuffle</span>
+        </div>
     </div>
 
     <div id="demo-list" class="gallery"></div>
@@ -108,8 +111,20 @@ function updateGallery() {
     }
 }
 
-shuffleArray(allDemos);
-updateGallery();
+function sortRandom() {
+    shuffleArray(allDemos);
+    updateGallery();
+}
+
+function sortDate() {
+    allDemos.sort((a, b) => {
+        return a.date < b.date ? 1 : -1;
+    });
+    updateGallery();
+}
+
+sortRandom();
+
 youtubeOverlay.addEventListener("click", (e) => {
     youtubePlayer.innerHTML = "";
     youtubeOverlay.style.display = "none";
