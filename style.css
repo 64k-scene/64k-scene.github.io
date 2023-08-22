@@ -144,7 +144,6 @@ nav a, .action-link {
 }
 
 p, li {
-    text-align: justify;
     hyphens: auto;
     line-height: 1.3;
 }
