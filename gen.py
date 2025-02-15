@@ -154,10 +154,13 @@ if __name__ == "__main__":
         94135, # 0b5vr GLSL Techno Live Set
         9424, # fr-030: candytron
         9438, # Project Genesis
+        96589, # Empires 
+        96594, # Naumachia Insianis
+        97517, # We float here
     ]
 
     # Comment if you want to fetch all prods (note that it will send lots of requests to pouet.net).
-    ids = ids[0:5]
+    ids = ids[-5:]
 
     for some_id in ids:
         prod_info = api.get_prod_info(some_id)

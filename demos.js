@@ -881,4 +881,31 @@ const allDemos = [
         "screenshot": "https://media.demozoo.org/screens/o/2d/7a/7c64.288726.jpg",
         "demozoo": "292275"
     } ,
+    {
+        "pouet": "96589",
+        "title": "Empires",
+        "group": "Conspiracy",
+        "youtube": "R-4wHUw_OdE",
+        "date": "2024-03-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00096/00096589.png",
+        "demozoo": "342435"
+    } ,
+    {
+        "pouet": "96594",
+        "title": "Naumachia Insianis",
+        "group": "Brain Control",
+        "youtube": "yoXZLfIC6yw",
+        "date": "2024-04-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00096/00096594.jpg",
+        "demozoo": "342434"
+    } ,
+    {
+        "pouet": "97517",
+        "title": "We float here",
+        "group": "Architect",
+        "youtube": "4q2nSuWS0kA",
+        "date": "2024-08-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00097/00097517.jpg",
+        "demozoo": "355455"
+    } ,
 ];
