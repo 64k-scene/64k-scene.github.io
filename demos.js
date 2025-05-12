@@ -908,4 +908,13 @@ const allDemos = [
         "screenshot": "https://content.pouet.net/files/screenshots/00097/00097517.jpg",
         "demozoo": "355455"
     } ,
+    {
+        "pouet": "103977",
+        "title": "Tension",
+        "group": "Digital Dynamite and Aenima",
+        "youtube": "48nLsoDwfJM",
+        "date": "2025-04-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00103/00103977.jpg",
+        "demozoo": "371364"
+    } ,
 ];

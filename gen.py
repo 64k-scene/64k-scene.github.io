@@ -157,11 +157,13 @@ if __name__ == "__main__":
         96589, # Empires 
         96594, # Naumachia Insianis
         97517, # We float here
+        103977, # Tension
     ]
 
     # Comment if you want to fetch all prods (note that it will send lots of requests to pouet.net).
     ids = ids[-5:]
 
+    # Print out the json structs for each prod. To be pasted in demos.js.
     for some_id in ids:
         prod_info = api.get_prod_info(some_id)
         print(json.dumps(prod_info, indent=4), ",")
