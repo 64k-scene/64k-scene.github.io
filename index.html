@@ -67,7 +67,7 @@ function showYouTube(id) {
     youtubeOverlay.style.display = "block";
 }
 
-const monthsStrings = [
+const monthStrings = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ]
@@ -109,7 +109,7 @@ function createCard(data) {
     date.className = "date";
     const dateArray = data.date.split("-");
     const year = dateArray[0];
-    const month = monthsStrings[dateArray[1] - 1];
+    const month = monthStrings[dateArray[1] - 1];
     date.innerText = year;
     // pouet database doesn't have the day (https://github.com/pouetnet/pouet2.0/issues/124)
     // so we show just the month + year.
