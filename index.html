@@ -67,6 +67,11 @@ function showYouTube(id) {
     youtubeOverlay.style.display = "block";
 }
 
+const monthsStrings = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
+
 function createCard(data) {
     const card = document.createElement("div");
     card.className = "card demo";
@@ -102,8 +107,13 @@ function createCard(data) {
 
     const date = document.createElement("div");
     date.className = "date";
-    date.innerText = data.date.split("-")[0];
-    date.title = data.date;
+    const dateArray = data.date.split("-");
+    const year = dateArray[0];
+    const month = monthsStrings[dateArray[1] - 1];
+    date.innerText = year;
+    // pouet database doesn't have the day (https://github.com/pouetnet/pouet2.0/issues/124)
+    // so we show just the month + year.
+    date.title = `${month} ${year}`;
     details.appendChild(date);
     card.appendChild(details);
     return card;
