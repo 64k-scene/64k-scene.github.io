@@ -158,6 +158,7 @@ if __name__ == "__main__":
         96594, # Naumachia Insianis
         97517, # We float here
         103977, # Tension
+        104973, # Brute Concrete
     ]
 
     # Comment if you want to fetch all prods (note that it will send lots of requests to pouet.net).

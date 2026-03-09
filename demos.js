@@ -917,4 +917,13 @@ const allDemos = [
         "screenshot": "https://content.pouet.net/files/screenshots/00103/00103977.jpg",
         "demozoo": "371364"
     } ,
+    {
+        "pouet": "104973",
+        "title": "Brute Concrete",
+        "group": "United Force and Digital Dynamite",
+        "youtube": "cHac0VpKh8c",
+        "date": "2025-09-15",
+        "screenshot": "https://content.pouet.net/files/screenshots/00104/00104973.jpg",
+        "demozoo": "377656"
+    } ,
 ];
